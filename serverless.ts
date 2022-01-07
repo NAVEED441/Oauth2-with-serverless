@@ -5,6 +5,7 @@ import autheraization from "@functions/autheraization";
 import createtoken from "@functions/createtoken";
 import createdata from "@functions/createdata";
 import getCompanyData from "@functions/getCompanyData";
+import getByName from "@functions/getByName";
 
 const serverlessConfiguration: AWS = {
   service: "aws-type-outh",
@@ -68,7 +69,14 @@ const serverlessConfiguration: AWS = {
   },
   // import the function via paths
 
-  functions: { autheraization, hello, createdata, createtoken, getCompanyData },
+  functions: {
+    autheraization,
+    hello,
+    createdata,
+    createtoken,
+    getCompanyData,
+    getByName,
+  },
 };
 
 module.exports = serverlessConfiguration;
